@@ -1,0 +1,17 @@
+Package: rfPIPeak
+Title: a Random Forests-based Chem-seq Site Identification Model
+Version: 0.0.1000
+Authors@R: 
+    person(given = "Jason",
+           family = "Lin",
+           role = c("aut", "cre"),
+           email = "linjason@chiba-cc.jp")
+Description: rfPIPeak is an integrated Chem-seq peak caller designed for analyzing pyrrole-imidazole (PI) polyamide affinity-enriched whole genome sequencing data using random forest.
+License: GPL-3.0
+Encoding: UTF-8
+LazyData: true
+Imports:
+	data.table (>= 1.9.6),
+	stats,
+	ranger (>= 0.10.1),
+	compiler

@@ -1,0 +1,8 @@
+PKG_CFLAGS = $(SHLIB_OPENMP_CFLAGS)
+PKG_LIBS = $(SHLIB_OPENMP_CFLAGS)
+
+all: $(SHLIB)
+	if [ -e rfPIPeak$(SHLIB_EXT)]; then rm rfPIPeak$(SHLIB_EXT) && mv $(SHLIB) rfPIPeak$(SHLIB_EXT); fi
+	if [ "$(OS)" != "Windows_NT" ] && [ `uname -s` = 'Darwin' ]; then install_name_tool -id rfPIPeak$(SHLIB_EXT) rfPIPeak$(SHLIB_EXT); fi
+
+
